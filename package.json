@@ -1,0 +1,41 @@
+{
+  "name": "www",
+  "displayName": "www",
+  "description": "this is www",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "pomodoro.start",
+      "title": "Start Pomodoro Timer"
+    },
+    {
+      "command": "pomodoro.stop",
+      "title": "Stop Pomodoro Timer"
+    },
+    {
+      "command": "pomodoro.reset",
+      "title": "Reset Pomodoro Timer"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "eslint": "^9.13.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
